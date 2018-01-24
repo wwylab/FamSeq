@@ -1,0 +1,8 @@
+
+Version 1.0.3 Make both GL and PL as indicator for likelihood section in VCF file. And Take the absolute value of PL(GL) from VCF file to make FamSeq compatible to freebayes. 8/20/2015
+
+Version 1.0.2 Add GPU-version Bayesian Network algorithm into FamSeq. 7/1/2013
+
+Version 1.0.1 Add Bayesian Network and MCMC algorithm into FamSeq. 7/1/2012
+
+Version 1.0.0 FamSeq 12/1/2011

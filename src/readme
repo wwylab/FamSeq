@@ -1,0 +1,32 @@
+Test data is provided in the package. You can type the following commands in the command line to run FamSeq:
+
+1. extract files from the compressed file:
+tar xvf FamSeq1.0.3.tar.gz
+
+2. go to source file directory and compile the source file
+cd FamSeq/src/
+#CPU version
+make
+
+#GPU version If you have CUDA-enabled GPUs in your computer.
+make -f makefile.gpu
+
+# if you use MacOS 10.8 with XCode 5, or an error like "unsupported option '-dumpspecs'" occurs when compiling, use the following command to compile
+make -f makefile.gpu.clang
+
+3. run the test data
+##CPU version
+#VCF file
+./FamSeq vcf -vcfFile ../TestData/test.vcf -pedFile ../TestData/fam01.ped -output test.FamSeq.vcf -v
+
+#likelihood only format
+./FamSeq LK -lkFile ../TestData/loftest.txt -pedFile ../TestData/fam01.ped -output test.FamSeq.txt
+
+##GPU version
+#VCF file
+./FamSeqCuda vcf -vcfFile ../TestData/test.vcf -pedFile ../TestData/fam01.ped -output test.FamSeq.vcf -v
+
+#likelihood only format
+./FamSeqCuda LK -lkFile ../TestData/loftest.txt -pedFile ../TestData/fam01.ped -output test.FamSeq.txt
+
+
